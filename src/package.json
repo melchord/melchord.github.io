@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build-export": "bash -c 'rm -fr ../melchord.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../melchord.github.io'",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
