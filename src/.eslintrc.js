@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'google'],
+  extends: ['plugin:react/recommended', 'google'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     quotes: [2, 'single', { avoidEscape: true }],
     'max-len': [2, { code: 100, tabWidth: 2, ignoreUrls: true }],
+    'object-curly-newline': 'off',
     'require-jsdoc': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
