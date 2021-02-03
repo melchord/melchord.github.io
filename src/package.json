@@ -5,11 +5,12 @@
   "scripts": {
     "build": "next build",
     "build-export": "bash -c 'rm -fr ../melchord.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../melchord.github.io'",
-    "eslint": "eslint ./pages --fix",
-    "dev": "next dev",
+    "eslint": "eslint ./pages ./layouts --fix",
+    "dev": "eslint && next dev",
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "next": "10.0.5",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
