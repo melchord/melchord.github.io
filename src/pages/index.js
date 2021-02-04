@@ -2,11 +2,15 @@ import { Alert } from 'reactstrap';
 
 import Layout from '../layouts/main';
 
+import styles from '../styles/Home.module.scss';
+
 const Component = () => (
-  <Layout>
-    <div className='title'>Melchor Dominguez</div>
-    <br />
-    <Alert>TODO: ADD MAIN PAGE</Alert>
+  <Layout title='Melchor Dominguez - Software Engineer'>
+    <div className={styles.title}>Melchor Dominguez</div>
+    <hr />
+    <Alert color='primary'>TODO: ABOUT ME MODULE</Alert>
+    <Alert color='primary'>TODO: BLOGS MODULE</Alert>
+    <Alert color='contact'>TODO: CONTACT MODULE</Alert>
   </Layout>
 );
 
