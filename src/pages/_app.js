@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import '../styles/globals.scss';
 import '../node_modules/bootstrap/scss/bootstrap.scss';
+import '../styles/globals.scss';
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;

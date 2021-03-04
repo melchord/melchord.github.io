@@ -1,10 +1,12 @@
 import { Alert } from 'reactstrap';
 import PropTypes from 'prop-types';
 
+import styles from '../styles/Layout.module.scss';
+
 import Head from 'next/head';
 
 const Component = ({ children, title }) => (
-  <>
+  <div className={styles.layout}>
     <Head>
       <link
         rel='stylesheet'
@@ -12,20 +14,14 @@ const Component = ({ children, title }) => (
       />
       <title>{title}</title>
     </Head>
-    <header>
-      <Alert color='primary'>TODO: ADD NAV BAR</Alert>
-    </header>
     {children}
-    <footer>
-      <Alert color='primary'>TODO: ADD FOOTER</Alert>
-    </footer>
-  </>
+  </div>
 );
 
 Component.displayName = 'Layout';
 
 Component.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   title: PropTypes.string,
 };
 
