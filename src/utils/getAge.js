@@ -8,5 +8,7 @@ export default (birthday = 'April 4, 1996') => {
   const days = hours * 24;
   const years = days * 365;
 
-  return ageInMilliseconds / years;
+  const age = ageInMilliseconds / years;
+
+  return age.toFixed(10);
 };
