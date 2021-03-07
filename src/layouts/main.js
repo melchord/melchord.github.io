@@ -1,4 +1,3 @@
-import { Alert } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import styles from '../styles/Layout.module.scss';
