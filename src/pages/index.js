@@ -5,6 +5,7 @@ import { getAge } from '../utils';
 const Component = () => {
   const age = getAge();
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
+  const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
   return (
     <Layout title='Melchor Dominguez - Software Engineer'>
       <div className={styles.title}>Melchor Dominguez</div>
@@ -14,7 +15,7 @@ const Component = () => {
       <h2>Check out my {githubLink}.</h2>
       <br />
       <h2>Currently on the search for my next project.</h2>
-      <h2>Business inquiry? Email Me!</h2>
+      <h2>Business inquiry? {emailLink}</h2>
       <img src='/owl.gif' />
     </Layout>
   );
