@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-
-import styles from '../styles/Layout.module.scss';
-
 import Head from 'next/head';
+
+import styles from './index.module.scss';
 
 const Component = ({ children, title }) => (
   <div className={styles.layout}>

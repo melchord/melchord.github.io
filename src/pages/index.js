@@ -1,6 +1,6 @@
-import Layout from '../layouts/main';
+import { Layout } from '../components';
 import styles from '../styles/Home.module.scss';
-import { getAge } from '../utils';
+import { getAge } from '../components/utils';
 
 const Component = () => {
   const age = getAge();

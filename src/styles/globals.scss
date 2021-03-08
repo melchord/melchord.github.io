@@ -1,7 +1,7 @@
 $animate: all 0.3s ease-in-out;
 
 body {
-  background: slategray;
+  background: #0e1821;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -14,13 +14,13 @@ h1 {
 
 a {
   position: relative;
-  color: black;
+  color: #798f8c;
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
-  color: black;
+  color: #798f8c;
   text-decoration: none;
 }
 
@@ -31,7 +31,7 @@ a:before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: #798f8c;
   visibility: hidden;
   transform: scaleX(0);
   transition: $animate;
