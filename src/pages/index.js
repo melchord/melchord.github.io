@@ -7,11 +7,15 @@ const Component = () => {
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
   const nextSpan = <span className={styles.nextJs}>Next.js</span>;
+  const reactSpan = <span className={styles.react}>React</span>;
+  const otherSpan = <span className={styles.other}>others</span>;
   return (
     <Layout title='Melchor Dominguez - Software Engineer'>
       <div className={styles.title}>Melchor Dominguez</div>
       <h2>I'm a {age} year-old developer</h2>
-      <h2>who has used {nextSpan}, React, and others.</h2>
+      <h2>
+        who has used {nextSpan}, {reactSpan}, and {otherSpan}.
+      </h2>
       <br />
       <h2>Check out my {githubLink}.</h2>
       <br />
