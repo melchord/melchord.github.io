@@ -1,6 +1,6 @@
 # Github Page
 
-This project will make use of GitHub Pages, Next.js, and a CMS which is TBD.
+This project will make use of GitHub Pages and Next.js.
 
 ## Check out the Deployment Site
 
