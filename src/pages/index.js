@@ -1,8 +1,22 @@
+import { useDispatch } from 'react-redux';
+
 import { Layout } from '../components';
+import { useInterval } from '../components/utils';
 import styles from '../styles/Home.module.scss';
 import { getAge } from '../components/utils';
 
 const Component = () => {
+  const dispatch = useDispatch();
+
+  // Tick the time every second
+  useInterval(() => {
+    dispatch({
+      type: 'tick',
+      light: true,
+      lastUpdate: Date.now(),
+    });
+  }, 1000);
+
   const age = getAge();
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;

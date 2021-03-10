@@ -1,10 +1,18 @@
 import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import { useStore } from '../store';
 
 import '../node_modules/bootstrap/scss/bootstrap.scss';
 import '../styles/globals.scss';
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  const store = useStore(pageProps.initialReduxState);
+
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />;
+    </Provider>
+  );
 }
 
 App.propTypes = {
