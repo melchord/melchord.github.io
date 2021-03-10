@@ -4,40 +4,37 @@ import { createStore } from 'redux';
 let store;
 
 const initialState = {
-  active = false,
-  currentPreview = 'nextjs',
+  active: false,
+  currentPreview: 'nextjs',
   lastUpdate: 0,
   light: false,
-}
+};
 
-const reducer = ( state = initialState, action) => {
-  switch(action.type) {
-    case 'tick': 
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'tick':
       return {
         ...state,
         lastUpdate: action.lastUpdate,
         light: !!action.light,
-      }
+      };
     case 'update':
       return {
-          ...state,
-          currentPreview: action.preview,
-      }
+        ...state,
+        currentPreview: action.preview,
+      };
     case 'setActive':
-    default: 
-      return state
+    default:
+      return state;
   }
-}
+};
 
 const initStore = (preloadedState = initialState) => {
-  return createStore(
-    reducer,
-    preloadedState
-  )
-}
+  return createStore(reducer, preloadedState);
+};
 
-export const initialStore = (preloadedState) => {
-  let _store = store ?? initStore(preloadedState)
+export const initializeStore = (preloadedState) => {
+  let _store = store ?? initStore(preloadedState);
 
   // After navigating to a page with an inital Redux state, merge that state
   // with the current state in the store, and create a new store
@@ -45,20 +42,20 @@ export const initialStore = (preloadedState) => {
     _store = initStore({
       ...store.getState(),
       ...preloadedState,
-    })
+    });
     // Reset the current store
-    store = undefined
+    store = undefined;
   }
 
   // For SSG and SSR always create a new store
-  if (typeof window === 'undefined') return _store
+  if (typeof window === 'undefined') return _store;
   // Create the store once in the client
-  if (!store) store = _store
+  if (!store) store = _store;
 
-  return _store
-}
+  return _store;
+};
 
 export const useStore = (initialState) => {
-  const store = useMemo(() => initialStore(initialState, [initialState]))
+  const store = useMemo(() => initializeStore(initialState, [initialState]));
   return store;
-}
+};

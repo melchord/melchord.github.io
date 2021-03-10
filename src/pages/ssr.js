@@ -18,6 +18,6 @@ export const getServerSideProps = () => {
     light: false,
     lastUpdate: Date.now(),
   });
-};
 
-return { props: { initialReduxState: reduxStore.getState() } };
+  return { props: { initialReduxState: reduxStore.getState() } };
+};
