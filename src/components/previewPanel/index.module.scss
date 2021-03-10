@@ -1,0 +1,23 @@
+.previewPanel {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -100;
+  text-align: center;
+  transition: opacity 0.5s linear;
+  margin-top: 120px;
+  padding: 20px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+
+  &:active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+  }
+
+  &.nextJS {
+    color: #e0b0ff;
+  }
+}

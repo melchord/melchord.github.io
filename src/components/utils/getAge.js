@@ -1,6 +1,5 @@
-export default (birthday = 'April 4, 1996') => {
+const getAge = (currentDate = Date.now(), birthday = 'April 4, 1996') => {
   const birthDate = new Date(birthday);
-  const currentDate = Date.now();
   const ageInMilliseconds = currentDate - birthDate;
 
   const minutes = 1000 * 60;
@@ -10,5 +9,7 @@ export default (birthday = 'April 4, 1996') => {
 
   const age = ageInMilliseconds / years;
 
-  return age.toFixed(10);
+  return age.toFixed(7);
 };
+
+export default getAge;
