@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 let store;
 
@@ -30,7 +31,7 @@ const reducer = (state = initialState, action) => {
 };
 
 const initStore = (preloadedState = initialState) => {
-  return createStore(reducer, preloadedState);
+  return createStore(reducer, preloadedState, composeWithDevTools(applyMiddleware()));
 };
 
 export const initializeStore = (preloadedState) => {

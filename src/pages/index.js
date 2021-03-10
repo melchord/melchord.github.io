@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Layout } from '../components';
 import { useInterval } from '../components/utils';
@@ -7,7 +7,9 @@ import { getAge } from '../components/utils';
 
 const Component = () => {
   const dispatch = useDispatch();
+  const currentDate = useSelector((state) => state.lastUpdate);
 
+  let age = getAge(currentDate);
   // Tick the time every second
   useInterval(() => {
     dispatch({
@@ -15,9 +17,9 @@ const Component = () => {
       light: true,
       lastUpdate: Date.now(),
     });
-  }, 1000);
+    age = getAge();
+  }, 100);
 
-  const age = getAge();
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
   const nextSpan = <span className={styles.nextJs}>Next.js</span>;
