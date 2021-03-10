@@ -18,7 +18,7 @@ const Component = () => {
       lastUpdate: Date.now(),
     });
     age = getAge();
-  }, 100);
+  }, 1000);
 
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
