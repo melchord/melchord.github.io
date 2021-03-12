@@ -26,7 +26,7 @@ const Component = () => {
   const reactSpan = <span className={styles.react}>React</span>;
   const otherSpan = <span className={styles.other}>others</span>;
   return (
-    <Layout title='Melchor Dominguez - Software Engineer'>
+    <Layout title='Melchor Dominguez'>
       <div className={styles.title}>Melchor Dominguez</div>
       <h2>I'm a {age} year-old developer</h2>
       <h2>
