@@ -1,0 +1,41 @@
+.previewPanel {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  transition: opacity 0.5s linear;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+
+  &:active {
+    opacity: 1;
+    visibility: visible !important;
+    z-index: 100;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .description {
+    width: 50%;
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.nextjs {
+  color: #e0b0ff;
+  border-color: #e0b0ff;
+}

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Layout } from '../components';
+import { Layout, PreviewPanel } from '../components';
 import { useInterval } from '../components/utils';
 import styles from '../styles/Home.module.scss';
 import { getAge } from '../components/utils';
@@ -18,7 +18,7 @@ const Component = () => {
       lastUpdate: Date.now(),
     });
     age = getAge();
-  }, 1000);
+  }, [1000]);
 
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
@@ -32,12 +32,14 @@ const Component = () => {
       <h2>
         who has used {nextSpan}, {reactSpan}, and {otherSpan}.
       </h2>
+      <PreviewPanel />
       <br />
       <h2>Check out my {githubLink}.</h2>
       <br />
       <h2>Currently on the search for my next project.</h2>
       <h2>Business inquiry? {emailLink}</h2>
       <img src='/owl.gif' />
+      <br />;
     </Layout>
   );
 };

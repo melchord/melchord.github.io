@@ -1,10 +1,26 @@
 import PropTypes from 'prop-types';
 
-import styles from './index.module.scss';
+const classNames = require('classnames');
 
-const Component = ({ active, current }) => <div className={styles.previewPanel}></div>;
+const Component = ({ active, current }) => {
+  const componentClassnames = classNames('previewPanel', current, {
+    active: active,
+  });
 
-Component.displayName = 'Layout';
+  const titleClassnames = classNames('title', current);
+  const descriptionClassnames = classNames('description');
+  return (
+    <div className={componentClassnames}>
+      <div className={titleClassnames}>Next.js</div>
+      <div className={descriptionClassnames}>
+        Next.js is an open-source React front-end framework that enables functionality sutch as
+        server-side rendinger and static generation. I have been using it since December 2020.
+      </div>
+    </div>
+  );
+};
+
+Component.displayName = 'previewPanel';
 
 Component.propTypes = {
   active: PropTypes.bool,
@@ -12,8 +28,8 @@ Component.propTypes = {
 };
 
 Component.defaultProps = {
-  active: false,
-  current: 'Nextjs',
+  active: true,
+  current: 'nextjs',
 };
 
 export default Component;
