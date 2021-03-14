@@ -35,7 +35,7 @@ const Component = () => {
       <br />
       <h2>Check out my {githubLink}.</h2>
       <br />
-      <h2>Currently on the search for my next project.</h2>
+      <h2>Currently working on finishing this website.</h2>
       <h2>Business inquiry? {emailLink}</h2>
       <img src='/owl.gif' />
       <br />;
