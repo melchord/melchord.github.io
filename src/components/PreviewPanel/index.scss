@@ -1,0 +1,76 @@
+.previewPanel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  transition: opacity 0.5s linear;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+
+  &.active {
+    display: flex;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 100;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .description {
+    width: 50%;
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+  }
+
+  .previewsContainer {
+    display: flex;
+  }
+
+  .preview {
+    margin: 10px;
+    min-width: 250px;
+    max-width: 350px;
+    height: 250px;
+    background: none;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    position: relative;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    background-position: center;
+    cursor: pointer;
+
+    h3 {
+      color: white;
+      display: block;
+      font-size: 1.17em;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+    }
+  }
+}
+
+.nextjs {
+  color: #e0b0ff;
+  border-color: #e0b0ff;
+}
+
+.nextjs > .preview {
+  border-color: #e0b0ff;
+}

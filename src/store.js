@@ -25,6 +25,10 @@ const reducer = (state = initialState, action) => {
         currentPreview: action.preview,
       };
     case 'setActive':
+      return {
+        ...state,
+        active: action.active,
+      };
     default:
       return state;
   }
