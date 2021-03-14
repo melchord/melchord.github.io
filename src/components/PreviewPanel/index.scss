@@ -1,6 +1,5 @@
 .previewPanel {
-  height: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -15,8 +14,9 @@
   border-width: 2px;
   border-style: solid;
 
-  &:active {
-    opacity: 1;
+  &.active {
+    display: flex;
+    opacity: 1 !important;
     visibility: visible !important;
     z-index: 100;
   }
@@ -32,6 +32,10 @@
     margin-top: 10px;
     font-size: 18px;
     color: white;
+  }
+
+  .previewsContainer {
+    display: flex;
   }
 
   .preview {
@@ -50,6 +54,7 @@
     cursor: pointer;
 
     h3 {
+      color: white;
       display: block;
       font-size: 1.17em;
       margin-block-start: 1em;

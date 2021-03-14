@@ -16,8 +16,13 @@ const Component = ({ active, current }) => {
         Next.js is an open-source React front-end framework that enables functionality such as
         server-side rendinger and static generation. I have been using it since December 2020.
       </div>
-      <div className='preview'>
-        <h3>Personal Website</h3>
+      <div className='previewsContainer'>
+        <div className='preview' style={{ backgroundImage: 'url(/owl.gif)' }}>
+          <h3>Personal Website</h3>
+        </div>
+        <div className='preview'>
+          <h3>Blog Site</h3>
+        </div>
       </div>
     </div>
   );
@@ -31,7 +36,7 @@ Component.propTypes = {
 };
 
 Component.defaultProps = {
-  active: true,
+  active: false,
   current: 'nextjs',
 };
 
