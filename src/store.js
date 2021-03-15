@@ -28,6 +28,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         active: action.active,
+        currentPreview: action.currentPreview,
       };
     default:
       return state;

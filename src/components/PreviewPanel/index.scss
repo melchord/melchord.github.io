@@ -4,6 +4,7 @@
   align-items: center;
   text-align: center;
   align-content: center;
+  justify-content: center;
   transition: opacity 0.5s linear;
   margin-top: 60px;
   margin-left: 20px;
@@ -36,6 +37,9 @@
 
   .previewsContainer {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .preview {

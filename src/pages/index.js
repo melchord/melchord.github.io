@@ -1,27 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Age, Layout, PreviewPanel } from '../components';
+import { Age, Layout, PreviewPanel, PreviewSelector } from '../components';
 import styles from '../styles/Home.module.scss';
 
 const Component = () => {
-  const dispatch = useDispatch();
   const isActive = useSelector((state) => state.active);
-
-  const activeDispatch = () =>
-    dispatch({
-      type: 'setActive',
-      active: !isActive,
-    });
 
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
-  const nextSpan = (
-    <span className={styles.nextJs} onClick={activeDispatch}>
-      Next.js
-    </span>
-  );
-  const reactSpan = <span className={styles.react}>React</span>;
-  const otherSpan = <span className={styles.other}>others</span>;
+  const nextSpan = <PreviewSelector type='nextjs' />;
+  const reactSpan = <PreviewSelector type='react' />;
+  const otherSpan = <PreviewSelector type='others' />;
   return (
     <Layout title='Melchor Dominguez'>
       <div className={styles.title}>Melchor Dominguez</div>
