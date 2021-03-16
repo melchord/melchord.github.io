@@ -6,25 +6,51 @@ const Component = ({ active, current }) => {
   const componentClassnames = classNames('previewPanel', current, {
     active: active,
   });
-
   const titleClassnames = classNames('title', current);
   const descriptionClassnames = classNames('description');
+
+  let title = 'Others';
+  let description =
+    'I have also working in Java, C/C++, Python, and a bit of Python. I have yet to make any personal projects to display here, but hope to change that soon.';
+  let previews = null;
+  if (current === 'nextjs') {
+    title = 'Next.js';
+    description = `Next.js is an open-source React front-end framework that enables functionality such as server-sider rendering and static generation. I have been 
+      using this framework since December 2020.`;
+    previews = (
+      <div className='previewsContainer'>
+        <a href='https://github.com/melchord/melchord.github.io'>
+          <div className='preview' style={{ backgroundImage: 'url(/webpage.png)' }}>
+            <h3>Personal Website</h3>
+          </div>
+        </a>
+        <a href='https://github.com/melchord/nextjs-blog'>
+          <div className='preview' style={{ backgroundImage: 'url(/blogs.png)' }}>
+            <h3>Blog Site</h3>
+          </div>
+        </a>
+      </div>
+    );
+  } else if (current === 'react') {
+    title = 'React';
+    description =
+      'I first picked up react during my previous employment in 2020. I was a full stack developer for the company website, check it out:';
+    previews = (
+      <div className='previewsContainer'>
+        <a href='https://quoininc.com/'>
+          <div className='preview' style={{ backgroundImage: 'url(/webpage.png)' }}>
+            <h3>Company Website</h3>
+          </div>
+        </a>
+      </div>
+    );
+  }
+
   return (
     <div className={componentClassnames}>
-      <div className={titleClassnames}>Next.js</div>
-      <div className={descriptionClassnames}>
-        Next.js is an open-source React front-end framework that enables functionality such as
-        server-side rendering and static generation. I have been using this framework since December
-        2020.
-      </div>
-      <div className='previewsContainer'>
-        <div className='preview' style={{ backgroundImage: 'url(/webpage.png)' }}>
-          <h3>Personal Website</h3>
-        </div>
-        <div className='preview' style={{ backgroundImage: 'url(/blogs.png)' }}>
-          <h3>Blog Site</h3>
-        </div>
-      </div>
+      <div className={titleClassnames}>{title}</div>
+      <div className={descriptionClassnames}>{description}</div>
+      {previews}
     </div>
   );
 };

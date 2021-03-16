@@ -1,10 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Age, Layout, PreviewPanel, PreviewSelector } from '../components';
 import styles from '../styles/Home.module.scss';
 
 const Component = () => {
   const isActive = useSelector((state) => state.active);
+  const currentPreview = useSelector((state) => state.currentPreview);
 
   const githubLink = <a href='https://github.com/melchord'>Github</a>;
   const emailLink = <a href='mailto: mdmngz411@gmail.com'>Email Me!</a>;
@@ -20,7 +21,7 @@ const Component = () => {
       <h2>
         who has used {nextSpan}, {reactSpan}, and {otherSpan}.
       </h2>
-      <PreviewPanel active={isActive} />
+      <PreviewPanel active={isActive} current={currentPreview} />
       <br />
       <h2>Check out my {githubLink}.</h2>
       <br />
