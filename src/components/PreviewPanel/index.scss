@@ -40,6 +40,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+
+    a {
+      color: inherit;
+    }
+
+    a:hover::before {
+      transform: scaleX(0);
+    }
   }
 
   .preview {
@@ -77,4 +85,22 @@
 
 .nextjs > .preview {
   border-color: #e0b0ff;
+}
+
+.react {
+  color: #3cb4e5;
+  border-color: #3cb4e5;
+}
+
+.react > .preview {
+  border-color: #3cb4e5;
+}
+
+.others {
+  color: #eab354;
+  border-color: #eab354;
+}
+
+.others > .preview {
+  border-color: #eab354;
 }
