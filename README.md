@@ -1,6 +1,5 @@
-# Github Page
-
-This project will make use of GitHub Pages and Next.js.
+This project is a personal website that speaks about some technologies I have used and projects I have worked on.
+This project utilizes Next.js and Github Pages.
 
 ## Check out the Deployment Site
 

@@ -6,7 +6,7 @@ const classNames = require('classnames');
 const Component = ({ type }) => {
   const dispatch = useDispatch();
   const isActive = useSelector((state) => state.active);
-  const currentPreview = useSelector((state) => state.current);
+  const currentPreview = useSelector((state) => state.currentPreview);
 
   const activeDispatch = () => {
     if (isActive === false) {
@@ -15,14 +15,12 @@ const Component = ({ type }) => {
         active: !isActive,
         currentPreview: type,
       });
-    } else {
-      if (currentPreview === type) {
-        return dispatch({
-          type: 'setActive',
-          active: isActive,
-          currentPreview: type,
-        });
-      }
+    } else if (currentPreview !== type) {
+      return dispatch({
+        type: 'setActive',
+        active: isActive,
+        currentPreview: type,
+      });
     }
 
     return dispatch({
