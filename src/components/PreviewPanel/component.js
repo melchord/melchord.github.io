@@ -11,7 +11,7 @@ const Component = ({ active, current }) => {
 
   let title = 'Others';
   let description =
-    'I have also working in Java, C/C++, Python, and a bit of Python. I have yet to make any personal projects to display here, but hope to change that soon.';
+    'I have also working in Java, C/C++, and a bit of Python. I have yet to make any personal projects to display here, but hope to change that soon.';
   let previews = null;
   if (current === 'nextjs') {
     title = 'Next.js';
