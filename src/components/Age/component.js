@@ -12,7 +12,7 @@ const Component = () => {
     dispatch({
       type: 'tick',
       light: true,
-      lastUpdate: Date.now(),
+      lastUpdate: new Date(),
     });
     age = getAge();
   }, [1000]);

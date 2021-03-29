@@ -7,7 +7,7 @@ let store;
 const initialState = {
   active: false,
   currentPreview: 'nextjs',
-  lastUpdate: Date.now(),
+  lastUpdate: new Date(),
   light: false,
 };
 
