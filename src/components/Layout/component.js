@@ -10,7 +10,7 @@ const Component = ({ children, title }) => (
         rel='stylesheet'
         href='https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Montserrat&display=swap'
       />
-      <link rel='icon' href='/favicon.ico' />
+      <link rel='shortcut icon' href='/favicon.ico' />
       <title>{title}</title>
     </Head>
     {children}
