@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { FaChrome, FaSignature } from 'react-icons/fa';
 
 const classNames = require('classnames');
 
@@ -20,13 +21,19 @@ const Component = ({ active, current }) => {
     previews = (
       <div className='previewsContainer'>
         <a href='https://github.com/melchord/melchord.github.io'>
-          <div className='preview' style={{ backgroundImage: 'url(/webpage.png)' }}>
+          <div className='preview'>
             <h3>Personal Website</h3>
+            <span>
+              <FaChrome />
+            </span>
           </div>
         </a>
         <a href='https://github.com/melchord/nextjs-blog'>
-          <div className='preview' style={{ backgroundImage: 'url(/blogs.png)' }}>
+          <div className='preview'>
             <h3>Blog Site</h3>
+            <span>
+              <FaSignature />
+            </span>
           </div>
         </a>
       </div>
@@ -38,8 +45,11 @@ const Component = ({ active, current }) => {
     previews = (
       <div className='previewsContainer'>
         <a href='https://quoininc.com/'>
-          <div className='preview' style={{ backgroundImage: 'url(/webpage.png)' }}>
+          <div className='preview'>
             <h3>Company Website</h3>
+            <span>
+              <FaChrome />
+            </span>
           </div>
         </a>
       </div>
