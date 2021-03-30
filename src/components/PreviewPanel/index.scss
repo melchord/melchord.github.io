@@ -75,6 +75,18 @@
       margin-inline-end: 0px;
       font-weight: bold;
     }
+
+    span {
+      z-index: -1;
+      position: relative;
+      top: -25%;
+      opacity: 0.6;
+
+      svg {
+        height: 100%;
+        width: 80%;
+      }
+    }
   }
 }
 

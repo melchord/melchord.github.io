@@ -25,7 +25,10 @@ const Component = () => {
       <br />
       <h2>Check out my {githubLink}.</h2>
       <br />
-      <h2>Currently working on finishing this website.</h2>
+      <h2>
+        Currently working on finishing this website, a pygame replication of the game Asteroids, and
+        a Google Analytics certificate.
+      </h2>
       <h2>Business inquiry? {emailLink}</h2>
       <img src='/owl.gif' />
       <br />;
