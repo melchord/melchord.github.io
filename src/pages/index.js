@@ -26,8 +26,8 @@ const Component = () => {
       <h2>Check out my {githubLink}.</h2>
       <br />
       <h2>
-        Currently working on finishing this website, a pygame replication of the game Asteroids, and
-        a Google Analytics certificate.
+        Currently working on a Flutter/Dart mobile application, an Advanced Google Analytics
+        Certificate, and updating projects.
       </h2>
       <h2>Business inquiry? {emailLink}</h2>
       <img src='/owl.gif' />
