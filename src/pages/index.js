@@ -2,9 +2,13 @@ import { useSelector } from 'react-redux';
 
 import { Age, Layout, PreviewPanel, PreviewSelector } from '../components';
 import initFirebase from '../firebase/initFirebase';
+import readFromCloudFirestore from '../firebase/read';
+import writeToCloudFirestore from '../firebase/write';
 import styles from '../styles/Home.module.scss';
 
 initFirebase();
+writeToCloudFirestore();
+readFromCloudFirestore();
 
 const Component = () => {
   const isActive = useSelector((state) => state.active);
