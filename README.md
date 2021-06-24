@@ -18,11 +18,22 @@ git clone https://github.com/melchord/melchord.github.io
 cd melchord.github.io/
 ```
 
-### Step 2: Instal npm dependencies
+### Step 2: Install npm dependencies
 
 ```sh
 cd src/
 npm i
+```
+
+### Step 3: Setup environment variables
+
+The project uses a number of variables which are necessary to run. These variables are maintained in a secrets file OR for developers maintained in .env
+
+```sh
+# src/.env
+NEXT_PUBLIC_FIREBASE_API_KEY=REQUIRED_KEY
+NEXT_PUBLIC_FIREBASE_STORAGE_BIN=REQUIRED_KEY
+...
 ```
 
 ### Step 3: Build and run dev
